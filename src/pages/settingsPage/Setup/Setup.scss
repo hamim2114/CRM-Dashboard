@@ -1,0 +1,36 @@
+@import '../../../global.scss';
+
+.s-menu {
+  color: rgb(116, 116, 116);
+  user-select: none;
+  &-name{
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+    cursor: pointer;
+    span{
+      font-weight: 600;
+      font-size: 17px;
+    }
+    svg{
+      font-size: 27px;
+    }
+  }
+  &-item{
+    display: flex;
+    flex-direction: column;
+    transform: translateX(1rem);
+    gap: 5px;
+    height: fit-content;
+    .item-link{
+      font-size: 17px;
+      padding: 5px 10px;
+      width: 200px;
+      border-radius: 8px;
+      &.active{
+        background-color: $light-blue;
+        font-weight: bold;
+      }
+    }
+  }
+}

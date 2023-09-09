@@ -1,0 +1,255 @@
+@import '../../global.scss';
+
+
+.topbar {
+  background-color: #fff;
+  &-container {
+    display: flex;
+    padding: 10px 2rem;
+    justify-content: space-between;
+    color: gray;
+    user-select: none;
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      z-index: 1;
+      .after-select-btn {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .left-btn {
+          border: 1px solid $gray;
+          padding: 5px 10px;
+          border-radius: 5px;
+          color: #020202;
+          @include shadow;
+          cursor: pointer;
+        }
+        .btn-option {
+          border: 1px solid $gray;
+          padding: 6px 10px;
+          border-radius: 5px;
+          color: #020202;
+          @include shadow;
+          cursor: pointer;
+        }
+      }
+      .filter-left-btn {
+        @include flex();
+        border: 1px solid $gray;
+        height: 38px;
+        width: 40px;
+        border-radius: 4px;
+        cursor: pointer;
+        @include shadow;
+      }
+      .all-contact-btn{
+        @include shadow;
+      }
+    }
+    .right {
+      @include flex();
+      position: relative;
+      gap: 20px;
+      .actions-btn{
+        @include shadow;
+      }
+    }
+  }
+}
+
+.tasks-page {
+  background-color: #edf0f4;
+  // height: 130vh;
+  &-container {
+    .top {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 3rem;
+    }
+    .bottom {
+      display: flex;
+      height: 75vh;
+      padding-bottom: 4rem;
+      .left {
+        flex: 2;
+        background-color: #fff;
+        margin: 0 1rem 0;
+        border-radius: 5px;
+        position: relative;
+        font-size: 18px;
+        color: #4e4e4e;
+        overflow-y: auto;
+        h3 {
+          padding: 0 15px;
+        }
+        &::-webkit-scrollbar {
+          width: 8px;
+        }
+        /* Define the style for the scrollbar thumb */
+        &::-webkit-scrollbar-thumb {
+          background-color: $gray;
+          border-radius: 5px;
+        }
+        &::-webkit-scrollbar-track {
+          background-color: #ffffff;
+          border-radius: 5px;
+        }
+        &::-webkit-scrollbar-corner {
+          background-color: #f0f0f0;
+        }
+        /* For Firefox scrollbar */
+        /* Define the style for the scrollbar track */
+        scrollbar-width: thin;
+        /* Define the style for the scrollbar thumb */
+        scrollbar-color: #6c757d #f0f0f0;
+        h3 {
+        }
+        .search {
+          display: flex;
+          align-items: center;
+          border: 1px solid $gray;
+          padding: 5px 10px;
+          margin: 0 15px;
+          border-radius: 50px;
+          margin-bottom: 10px;
+          input {
+            border: none;
+            outline: none;
+            width: 100%;
+          }
+        }
+        .filter-btn {
+          display: flex;
+          align-items: center;
+          padding: 0 15px;
+          button {
+            font-size: 15px;
+            font-weight: bold;
+          }
+          svg {
+            font-size: 1.7rem;
+          }
+        }
+        .filter-list {
+          display: none;
+          margin-left: 5px;
+          padding: 15px;
+          &.active {
+            display: block;
+          }
+          .filter-list-item {
+            margin-bottom: 5px;
+            .checkbox {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              user-select: none;
+            }
+            .checkbox-item {
+              margin-left: 27px;
+              display: none;
+              &.active {
+                display: block;
+              }
+
+              select {
+                width: 200px;
+                border: 1px solid $gray;
+                padding: 4px;
+                border-radius: 5px;
+                margin: 5px;
+              }
+              .up {
+                select {
+                  width: 200px;
+                }
+              }
+              .down {
+                margin-left: 18px;
+                display: flex;
+                align-items: center;
+                .select1 {
+                  width: 100px;
+                }
+                input {
+                  width: 30px;
+                  border: 1px solid $gray;
+                  padding: 5px;
+                  border-radius: 5px;
+                }
+                .select2 {
+                  width: 80px;
+                }
+              }
+              .email-status,
+              .activities,
+              .notes {
+                span {
+                  font-size: 17px;
+                  font-weight: bold;
+                }
+                .status-radio-group {
+                  display: flex;
+                  align-items: center;
+                  gap: 5px;
+                  user-select: none;
+                }
+              }
+              .campaign-field {
+                width: 189px;
+                border: 1px solid $gray;
+                padding: 4px;
+                border-radius: 5px;
+                margin: 5px;
+              }
+            }
+          }
+        }
+        .apply-filter-btn {
+          position: sticky;
+          bottom: 0;
+          background-color: #fff;
+          padding: 15px;
+          box-shadow: 0px -2px 5px rgb(202, 202, 202);
+          display: none;
+          &.active {
+            display: block;
+          }
+          .apply-filter {
+            background-color: $blue;
+            padding: 10px 20px;
+            font-weight: bold;
+            color: #fff;
+            margin-right: 1.5rem;
+            border-radius: 5px;
+            @include shadow;
+          }
+          .clear {
+            border: 1px solid $gray;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            background-color: #fff;
+            @include shadow;
+          }
+        }
+      }
+      .right {
+        margin: 0 1rem 0 0;
+        border-radius: 5px;
+        flex: 8;
+        background-color: #fff;
+        overflow-x: auto;
+      }
+    }
+  }
+}
+
+//remove outline when click on table row cell
+.MuiDataGrid-cell:focus {
+  outline: none !important;
+}

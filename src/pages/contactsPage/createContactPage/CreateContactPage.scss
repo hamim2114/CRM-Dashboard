@@ -1,0 +1,106 @@
+@import '../../../global.scss';
+
+.create-contact {
+  @include container;
+  height: 100vh;
+  overflow-y: auto;
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+    .right {
+      display: flex;
+      gap: 10px;
+    }
+  }
+  .img-upload {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    span {
+      font-size: 19px;
+      font-weight: bold;
+      color: gray;
+      margin-bottom: 1rem;
+    }
+    label{
+      svg{
+        width: 40px;
+        height: 40px;
+        border: 1px solid gray;
+        border-radius: 50%;
+        color: gray;
+      }
+    }
+  }
+  .lead-info {
+    &-container {
+      display: flex;
+      .left {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        &-wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          .info-input {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 1.2rem;
+            span {
+              font-size: 18px;
+              color: gray;
+            }
+            .info-field {
+              padding: 10px;
+              border: 1px solid $gray;
+              border-radius: 5px;
+              width: 350px;
+              &:focus {
+                outline: 1px solid $blue;
+              }
+            }
+          }
+        }
+      }
+      .right {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        &-wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          .info-input {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 1.2rem;
+            span {
+              font-size: 18px;
+              color: gray;
+            }
+            .info-field {
+              padding: 10px;
+              border: 1px solid $gray;
+              border-radius: 5px;
+              width: 350px;
+              &:focus {
+                outline: 1px solid $blue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .address-info {
+  }
+  .desc-info {
+  }
+}

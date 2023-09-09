@@ -1,0 +1,86 @@
+@import '../../../global.scss';
+
+.edit-task {
+  @include container;
+  height: 100vh;
+  overflow-y: auto;
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+    .right {
+      display: flex;
+      gap: 10px;
+    }
+  }
+  .img-upload {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    span {
+      font-size: 19px;
+      font-weight: bold;
+      color: gray;
+      margin-bottom: 1rem;
+    }
+    label{
+      svg{
+        width: 40px;
+        height: 40px;
+        border: 1px solid gray;
+        border-radius: 50%;
+        color: gray;
+      }
+    }
+  }
+  .task-info {
+  
+    &-container {
+      display: flex;
+      margin-top: 3rem;
+      margin-bottom: 4rem;
+      .left {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        &-wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          .info-input {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 1.2rem;
+            span {
+              font-size: 18px;
+              color: gray;
+            }
+            select{
+              border: none;
+              font-size: 16px;
+              color: gray;
+              outline: none;
+            }
+            .info-field {
+              padding: 10px;
+              border: none;
+              border-bottom: 1px solid $gray;
+              width: 350px;
+              &:focus {
+                outline:none;
+              }
+            }
+          }
+        }
+      }
+      
+    }
+  }
+  .address-info {
+  }
+  .desc-info {
+  }
+}
